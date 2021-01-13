@@ -14,7 +14,7 @@
 #include "TopTagger/TopTagger/interface/TopTagger.h"
 #include "TopTagger/TopTagger/interface/TopTaggerResults.h"
 #include "TopTagger/TopTagger/interface/TopTaggerUtilities.h"
-#include "TopTagger/CfgParser/include/TTException.h"
+#include "TopTagger/CfgParser/interface/TTException.h"
 #include "TopTagger/TopTagger/interface/lester_mt2_bisect.h"
 
 void SimpleAnalyzer::InitHistos()
@@ -80,9 +80,10 @@ void SimpleAnalyzer::Loop(double weight, int maxevents, bool isQuiet, bool isFas
           *recoJetsBtag_slimmed,
           *qgLikelihood_slimmed
           );
-      AK4Inputs.addSupplamentalVector("qgPtD",    *qgPtD_slimmed);
-      AK4Inputs.addSupplamentalVector("qgAxis2",  *qgAxis2_slimmed);
-      AK4Inputs.addSupplamentalVector("qgMult",   *qgMult_slimmed); 
+      AK4Inputs.addSupplamentalVector("qgPtD",          *qgPtD_slimmed);
+      AK4Inputs.addSupplamentalVector("qgAxis2",        *qgAxis2_slimmed);
+      AK4Inputs.addSupplamentalVector("qgMult",         *qgMult_slimmed); 
+      AK4Inputs.addSupplamentalVector("qgLikelihood",   *qgLikelihood_slimmed);
     
       // Create AK8 inputs object
       ttUtility::ConstAK8Inputs<double> AK8Inputs = ttUtility::ConstAK8Inputs<double>(
