@@ -1,0 +1,24 @@
+imax 1 number of bins
+jmax 5 number of backgrounds
+kmax * number of nuisances
+--------------------------------------------------
+bin ch1
+observation 47
+--------------------------------------------------
+bin ch1 ch1 ch1 ch1 ch1 ch1 
+process T2tt ttbarW zinv qcd ttz rare
+process 0 1 2 3 4 5
+rate 16.295 33.810 10.546 2.455 3.097 6.354
+--------------------------------------------------
+T2tt_stat_unc gmN 1442 0.01130 - - - - -
+T2tt_syst_unc lnN 1.089 - - - - -
+ttbarW_stat_unc gmN 71 - 0.47620 - - - -
+ttbarW_syst_unc lnN - 1.026 - - - -
+zinv_stat_unc gmN 434 - - 0.02430 - - -
+zinv_syst_unc lnN - - 1.635 - - -
+qcd_stat_unc gmN 1 - - - 2.45500 - -
+qcd_syst_unc lnN - - - 2.208 - -
+ttz_stat_unc gmN 179 - - - - 0.01730 -
+ttz_syst_unc lnN - - - - 1.303 -
+rare_stat_unc gmN 52 - - - - - 0.12220
+rare_syst_unc lnN - - - - - 1.207
